@@ -2,6 +2,7 @@ const express=require("express");
 const bp=require("body-parser");
 const ejs=require("ejs");
 const app=express();
+const app2=express();
 
 const mongoose=require("mongoose");
 const { redirect } = require("express/lib/response");
@@ -184,4 +185,7 @@ function checkAuthenticated(req, res, next){
 };
 
 
-app.listen(process.env.PORT||3000,()=>{});
+app2.get("/",(req,res)=>{
+    res.send("Hello");
+})
+app2.listen(process.env.PORT||3000,()=>{});
