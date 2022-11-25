@@ -185,7 +185,7 @@ function checkAuthenticated(req, res, next){
 };
 
 
-app2.get("/",(req,res)=>{
-    res.send("Hello");
-})
-app2.listen(process.env.PORT||3000,()=>{});
+// app2.get("/",(req,res)=>{
+//     res.send("Hello");
+// })
+app.listen(process.env.PORT||3000,()=>{});
